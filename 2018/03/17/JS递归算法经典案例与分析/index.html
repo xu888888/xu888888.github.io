@@ -6,21 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://qms888888.gitee.io">
-  <title>Hello World | Ambition~不忘初心</title>
+  <title>JS递归算法经典案例与分析 | Ambition~不忘初心</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="JS递归算法经典案例与分析">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://qms888888.gitee.io/2020/08/28/hello-world/index.html">
+<meta property="og:title" content="JS递归算法经典案例与分析">
+<meta property="og:url" content="https://qms888888.gitee.io/2018/03/17/JS%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%E7%BB%8F%E5%85%B8%E6%A1%88%E4%BE%8B%E4%B8%8E%E5%88%86%E6%9E%90/index.html">
 <meta property="og:site_name" content="Ambition~不忘初心">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="JS递归算法经典案例与分析">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-08-28T11:39:37.918Z">
-<meta property="article:modified_time" content="2020-08-29T03:21:43.697Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200711092141130.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200711092411340.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200711095640834.png">
+<meta property="article:published_time" content="2018-03-17T03:29:43.000Z">
+<meta property="article:modified_time" content="2020-08-29T03:31:58.070Z">
 <meta property="article:author" content="Ambition">
+<meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200711092141130.png">
   
     <link rel="alternative" href="/atom.xml" title="Ambition~不忘初心" type="application/atom+xml">
   
@@ -202,14 +207,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JS递归算法经典案例与分析" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      JS递归算法经典案例与分析
     </h1>
   
 
@@ -221,8 +226,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/08/28/hello-world/" class="archive-article-date">
-        <time datetime="2020-08-28T11:39:37.918Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-28</time>
+<a href="/2018/03/17/JS%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%E7%BB%8F%E5%85%B8%E6%A1%88%E4%BE%8B%E4%B8%8E%E5%88%86%E6%9E%90/" class="archive-article-date">
+        <time datetime="2018-03-17T03:29:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-17</time>
 </a>
 
   
@@ -235,7 +240,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">75字</span>
+      <span class="post-count">1.4k字</span>
     </span>
   </span>
 
@@ -244,7 +249,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">5分</span>
     </span>
   </span>
 </div>
@@ -255,20 +260,33 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <h2 id="什么是递归函数"><a href="#什么是递归函数" class="headerlink" title="什么是递归函数"></a>什么是递归函数</h2><p>简单定义：当函数直接或者间接调用自己时，则发生了递归.” 说起来简单, 但是理解起来复杂, 因为递归并不直观, 也不符合我们的思维习惯, 相对于递归, 我们更加容易理解迭代. 因为我们日常生活中的思维方式就是一步接一步的, 并且能够理解一件事情做了N遍这个概念. 而我们日常生活中几乎不会有递归思维的出现.</p>
 <a id="more"></a>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>举个简单的例子：<br>求1到5的累加和    下面是传统的方式, 我们一般都这样通过迭代来计算累加和, 也很好理解.</p>
+<p><img src="https://img-blog.csdnimg.cn/20200711092141130.png" alt="for循环"><br>而事实上, 我们也可以通过递归来完成这样的任务.<br><img src="https://img-blog.csdnimg.cn/20200711092411340.png" alt="递归"><br>只不过, 我们都不这么做罢了, 虽然这样的实现有的时候可能代码更短, 但是很明显, 从思维上来说更加难以理解一些. 当然, 我是说假如你不是习惯于函数式语言的话. 这个例子相对简单, 稍微看一下还是能明白吧.</p>
+<p>作为这么简单的例子, 两种算法其实大同小异, 虽然我们习惯迭代, 但是, 也能看到, 递归的算法无论是从描述上还是实际实现上, 并不比迭代要麻烦.</p>
+<h3 id="理解递归"><a href="#理解递归" class="headerlink" title="理解递归"></a>理解递归</h3><p>在初学递归的时候, 看到一个递归实现, 我们总是难免陷入不停的回溯验证之中, 因为回溯就像反过来思考迭代, 这是我们习惯的思维方式, 但是实际上递归不需要这样来验证.<br>要实现递归要书写两个内容:</p>
+<ul>
+<li>一个是满足结束条件的时候结束函数</li>
+<li>一个是不满足结束条件的时候要执行的代码</li>
+</ul>
+<p>我们拿上面案例来作为分析：<br>1.我要书写一个函数叫做add<br>2.这个函数有形参n,调用的时候:add(n)<br>3.我这个add函数的功能是计算任意一个数1到n的累加和。<br>这里以n=5来分析<br><img src="https://img-blog.csdnimg.cn/20200711095640834.png" alt="在这里插入图片描述"></p>
+<h4 id="分析思路："><a href="#分析思路：" class="headerlink" title="分析思路："></a>分析思路：</h4><p>第一遍<br>计算输入的n即n=5;程序开始执行，<br>返回的是add（ 5 - 1） + 5 的值，即返回的是add(4)+5的值，add(4)的值是多少？<br>因为没有具体数值,程序就要去执行add(4)，即调用第二遍</p>
+<p>第二遍<br>计算add(4)，程序开始执行，<br>返回的是add（ 4 - 1） + 4 的值，即返回的是add(3)+4的值，add(3)的值是多少？<br>因为没有具体数值,程序就要去执行add(3)，即调用第三遍</p>
+<p>第三遍<br> 计算add(3)，程序开始执行，<br>返回的是add（ 3 - 1） + 3 的值，即返回的是add(2)+3的值，add(2)的值是多少？<br>因为没有具体数值,程序就要去执行add(2)，即调用第四遍</p>
+<p>第四遍<br>计算add(2)，程序开始执行，<br>返回的是add（ 2 - 1） + 3 的值，即返回的是add(1)+2的值，add(1)的值是多少？<br>因为没有具体数值,程序就要去执行add(1)，即调用第五遍</p>
+<p>第五遍<br>计算add(1)，程序开始执行，<br>当n==1 时，满足第一个条件，返回的值是1,是一个具体数值，此时函数不在调用自身。<br>看到这里我们就应该明白此时</p>
+<p>add（1）=1<br>add（2）=add（1）+2 =1+2<br>add（3）=add（2）+3=1+2+3<br>add（4）=add（3）+4=1+2+3+4<br>add（5）=add（4）+5=1+2+3+4+5<br>…..<br>…..<br>add（n)=add(n-1)+n=1+2+3+4+5+………+n</p>
+<p>注意点：使用递归时，要有结束条件，否则就会“死循环”，造成浏览器崩溃。</p>
+<h3 id="使用递归"><a href="#使用递归" class="headerlink" title="使用递归"></a>使用递归</h3><p>既然递归比迭代要难以理解, 为啥我们还需要递归呢? 从上面的例子来看, 自然意义不大, 但是很多东西的确用递归思维会更加简单……</p>
+<p>经典的例子就是斐波那契数列（Fibonacci sequence），又称黄金分割数列、<br>            因数学家列昂纳多·斐波那契（Leonardoda Fibonacci）以兔子繁殖为例子而引入，故又称为“兔子数列”，<br>            指的是这样一个数列：1、1、2、3、5、8、13、21、34、……在数学上，<br>            斐波那契数列以如下被以递推的方法定义：F(1)=1，F(2)=1, F(n)=F(n - 1)+F(n - 2)（n ≥ 3）</p>
+<pre><code>        有了递归的算法, 用程序实现实在再简单不过了:</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">function</span> fibonacci(n)&#123;</span><br><span class="line">         <span class="keyword">if</span>(n==1)&#123;</span><br><span class="line">             <span class="built_in">return</span> 1;</span><br><span class="line">         &#125;</span><br><span class="line">         <span class="keyword">if</span>(n==2)&#123;</span><br><span class="line">             <span class="built_in">return</span> 1;</span><br><span class="line">         &#125;</span><br><span class="line">         //n = 3 :<span class="built_in">return</span> fibonacci(2)+fibonacci(1)</span><br><span class="line">         //n = 4 :<span class="built_in">return</span> fibonacci(3)+fibonacci(2)</span><br><span class="line">         <span class="built_in">return</span> fibonacci(n-1)+fibonacci(n-2);</span><br><span class="line">     &#125;</span><br><span class="line">     console.log(fibonacci(6))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>改为用迭代实现呢? 你可以试试.</p>
+<h3 id="递归的问题"><a href="#递归的问题" class="headerlink" title="递归的问题"></a>递归的问题</h3><p>当然, 这个世界上没有啥时万能的, 递归也不例外, 首先递归并不一定适用所有情况, 很多情况用迭代远远比用递归好了解, 其次, 相对来说, 递归的效率往往要低于迭代的实现, 同时, 内存耗用也会更大, 虽然这个时候可以用尾递归来优化, 但是尾递归并不是一定能简单做到.它是依据数据结构的栈的原理，不断开辟新的内存空间以满足程序需要，而不是不断改变已有内存空间的值来满足程序需要，所以递归是一种极具消耗内存资源的算法思维，所以在现实项目中，除非代码量影响过大，否则能不用递归就不用递归.</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://www.ibm.com/developerworks/cn/linux/l-recurs.html">精通递归程序设计 </a></p>
+<p>创作不易，点个赞吧！！</p>
 
     
 
@@ -315,7 +333,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="https://qms888888.gitee.io/2020/08/28/hello-world/" title="Hello World" target="_blank">https://qms888888.gitee.io/2020/08/28/hello-world/</a>
+          <a href="https://qms888888.gitee.io/2018/03/17/JS递归算法经典案例与分析/" title="JS递归算法经典案例与分析" target="_blank">https://qms888888.gitee.io/2018/03/17/JS递归算法经典案例与分析/</a>
         </li>
         
         <li>
@@ -331,7 +349,23 @@
   </div>
   <div class="article-info article-info-index">
     
+    <div class="article-pop-out tagcloud">
+      <i class="icon-tuding"></i>
+      <a class="article-tag-list-link color3">置顶</a>
+    </div>
     
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
     
 
     
@@ -382,7 +416,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://qms888888.gitee.io/2020/08/28/hello-world/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://qms888888.gitee.io/2018/03/17/JS%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%E7%BB%8F%E5%85%B8%E6%A1%88%E4%BE%8B%E4%B8%8E%E5%88%86%E6%9E%90/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -397,11 +431,15 @@
 
 <nav id="article-nav">
   
-  
-    <a href="/2018/03/17/JS%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%E7%BB%8F%E5%85%B8%E6%A1%88%E4%BE%8B%E4%B8%8E%E5%88%86%E6%9E%90/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JS递归算法经典案例与分析</div>
-      <i class="icon-circle-right"></i>
+    <a href="/2020/08/28/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
     </a>
+  
   
 </nav>
 
