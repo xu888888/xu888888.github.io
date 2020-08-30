@@ -6,16 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://qms888888.gitee.io">
-  <title>Archives | Ambition~不忘初心</title>
+  <title>HTTP请求完整过程以及头信息深入解析 | Ambition~不忘初心</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Ambition~不忘初心">
-<meta property="og:url" content="https://qms888888.gitee.io/archives/index.html">
+  <meta name="description" content="HTTP请求完整过程以及头信息深入解析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTTP请求完整过程以及头信息深入解析">
+<meta property="og:url" content="https://qms888888.gitee.io/2018/03/20/HTTP%E8%AF%B7%E6%B1%82%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B%E4%BB%A5%E5%8F%8A%E5%A4%B4%E4%BF%A1%E6%81%AF%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90/index.html">
 <meta property="og:site_name" content="Ambition~不忘初心">
+<meta property="og:description" content="HTTP请求完整过程以及头信息深入解析">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2018-03-20T06:54:43.000Z">
+<meta property="article:modified_time" content="2020-08-30T14:45:51.864Z">
 <meta property="article:author" content="Ambition">
+<meta property="article:tag" content="javascript">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Ambition~不忘初心" type="application/atom+xml">
@@ -198,126 +203,393 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-HTTP请求完整过程以及头信息深入解析" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/08/28/hello-world/" class="archive-article-date">
-        <time datetime="2020-08-28T11:39:37.918Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-28</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/08/28/hello-world/" target="_blank">Hello World</a>
   
+    <h1 class="article-title" itemprop="name">
+      HTTP请求完整过程以及头信息深入解析
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2018/03/21/%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/" class="archive-article-date">
-        <time datetime="2018-03-21T07:42:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-21</time>
-</a>
-
-        </div>
-    	 
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2018/03/21/%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/" target="_blank">防抖和节流</a>
-  
-    </h1>
-  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
 
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
 <a href="/2018/03/20/HTTP%E8%AF%B7%E6%B1%82%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B%E4%BB%A5%E5%8F%8A%E5%A4%B4%E4%BF%A1%E6%81%AF%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90/" class="archive-article-date">
         <time datetime="2018-03-20T06:54:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-20</time>
 </a>
 
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">2.2k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">8分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h4 id="本文介绍HTTP请求已经各种method之间的区别与联系。"><a href="#本文介绍HTTP请求已经各种method之间的区别与联系。" class="headerlink" title="本文介绍HTTP请求已经各种method之间的区别与联系。"></a>本文介绍HTTP请求已经各种method之间的区别与联系。</h4><div style="border: 1px solid #ccc;border-radius: 10px;padding-left:20px;">
+
+<p>  <strong>目录</strong></p>
+<ul>
+<li><a href="#1">HTTP 请求/响应的步骤</a></li>
+<li><a href="#2">请求头和响应头</a><ul>
+<li><a href="#3">request header</a></li>
+<li><a href="#4">response header</a></li>
+</ul>
+</li>
+<li><a href="#5">请求method</a><ul>
+<li><a href="#6">GET和POST</a></li>
+<li><a href="#7">其他请求method</a></li>
+<li><a href="#8">总结</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<a id="more"></a>
+
+<h3 id="HTTP-请求-响应的步骤"><a href="#HTTP-请求-响应的步骤" class="headerlink" title="HTTP 请求/响应的步骤"></a><a name="1">HTTP 请求/响应的步骤</a></h3><div style="border: 1px solid #ccc;border-radius: 10px;padding-left:20px;">
+
+<p>客户端连接到 Web 服务器 一个 HTTP 客户端，通常是浏览器，与 Web 服务器的 HTTP 端口（默认为80）建立一个 TCP 套接字连接。例如，<a target="_blank" rel="noopener" href="http://www.baidu.com./">http://www.baidu.com。</a></p>
+<p>发送 HTTP 请求 通过 TCP 套接字，客户端向 Web 服务器发送一个文本的请求报文，一个请求报文由请求行、请求头部、空行和请求数据 4 部分组成。</p>
+<p>服务器接受请求并返回 HTTP 响应 Web服务器解析请求，定位请求资源。服务器将资源复本写到 TCP 套接字，由客户端读取。一个响应由状态行、响应头部、空行和响应数据 4 部分组成。</p>
+<p>释放连接 TCP 连接 若 connection 模式为 close，则服务器主动关闭 TCP 连接，客户端被动关闭连接，释放 TCP 连接;若 connection 模式为 keepalive，则该连接会保持一段时间，在该时间内可以继续接收请求;</p>
+<p>客户端浏览器解析 HTML 内容 客户端浏览器首先解析状态行，查看表明请求是否成功的状态代码。然后解析每一个响应头，响应头告知以下为若干字节的 HTML 文档和文档的字符集。客户端浏览器读取响应数据 HTML，根据 HTML 的语法对其进行格式化，并在浏览器窗口中显示。</p>
+</div>
+
+<h3 id="请求头和响应头"><a href="#请求头和响应头" class="headerlink" title="请求头和响应头"></a><a name="2">请求头和响应头</a></h3><h4 id="request-header"><a href="#request-header" class="headerlink" title="request header"></a><a name="3">request header</a></h4><div style="border: 1px solid #ccc;border-radius: 10px;padding-left:20px;">
+
+<p>1.method，详见下文</p>
+<p>2.Host</p>
+<p>  请求的web服务器域名地址</p>
+<p>3.User-Agent</p>
+<p>  HTTP客户端运行的浏览器类型的详细信息。通过该头部信息，web服务器可以判断出http请求的客户端的浏览器的类型。</p>
+<p>4.Accept</p>
+<p>  指定客户端能够接收的内容类型，内容类型的先后次序表示客户都接收的先后次序</p>
+<p>5.Accept-Lanuage</p>
+<p>  指定HTTP客户端浏览器用来展示返回信息优先选择的语言</p>
+<p>6.Accept-Encoding</p>
+<p>  指定客户端浏览器可以支持的web服务器返回内容压缩编码类型。表示允许服务器在将输出内容发送到客户端以前进行压缩，以节约带宽。而这里设置的就是客户端浏览器所能够支持的返回压缩格式。</p>
+<p>7.Accept-Charset</p>
+<p>  HTTP客户端浏览器可以接受的字符编码集</p>
+<p>8.Content-Type</p>
+<p>  显示此HTTP请求提交的内容类型。一般只有post提交时才需要设置该属性</p>
+<p>  有关Content-Type属性值有如下两种编码类型：</p>
+<p>1.“application/x-www-form-urlencoded”： 表单数据向服务器提交时所采用的编码类型，默认的缺省值就是“application/x-www-form-urlencoded”。 然而，在向服务器发送大量的文本、包含非ASCII字符的文本或二进制数据时这种编码方式效率很低。</p>
+<p>2.“multipart/form-data”： 在文件上载时，所使用的编码类型应当是“multipart/form-data”，它既可以发送 文本数据，也支持二进制数据上载。<br>当提交为表单数据时，可以使用“application/x-www-form-urlencoded”；当提交的是文件时，就需要使用“multipart/form-data”编码类型。</p>
+<p>9.Keep-Alive</p>
+<p>  表示是否需要持久连接。如果web服务器端看到这里的值为“Keep-Alive”，或者看到请求使用的是HTTP 1.1（HTTP 1.1默认进行持久连接），它就可以利用持久连接的优点</p>
+</div>
+
+<h4 id="response-header"><a href="#response-header" class="headerlink" title="response header"></a><a name="4">response header</a></h4><table>
+<thead>
+<tr>
+<th align="center">Header</th>
+<th align="center">解释</th>
+<th align="center">示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Accept-Ranges</td>
+<td align="center">表明服务器是否支持指定范围请求及哪种类型的分段请求</td>
+<td align="center">Accept-Ranges: bytes</td>
+</tr>
+<tr>
+<td align="center">Age</td>
+<td align="center">从原始服务器到代理缓存形成的估算时间（以秒计，非负）</td>
+<td align="center">Age: 12</td>
+</tr>
+<tr>
+<td align="center">Allow</td>
+<td align="center">对某网络资源的有效的请求行为，不允许则返回405</td>
+<td align="center">Allow: GET, HEAD</td>
+</tr>
+<tr>
+<td align="center">Cache-Control</td>
+<td align="center">告诉所有的缓存机制是否可以缓存及哪种类型</td>
+<td align="center">Cache-Control: no-cache</td>
+</tr>
+<tr>
+<td align="center">Content-Encoding</td>
+<td align="center">web服务器支持的返回内容压缩编码类型。</td>
+<td align="center">Content-Encoding: gzip</td>
+</tr>
+<tr>
+<td align="center">Content-Language</td>
+<td align="center">响应体的语言</td>
+<td align="center">Content-Language: en,zh</td>
+</tr>
+<tr>
+<td align="center">Content-Length</td>
+<td align="center">响应体的长度</td>
+<td align="center">Content-Length: 348</td>
+</tr>
+<tr>
+<td align="center">Content-Location</td>
+<td align="center">请求资源可替代的备用的另一地址</td>
+<td align="center">Content-Location: /index.htm</td>
+</tr>
+<tr>
+<td align="center">Content-MD5</td>
+<td align="center">返回资源的MD5校验值</td>
+<td align="center">Content-MD5: Q2hlY2sgSW50ZWdyaXR5IQ==</td>
+</tr>
+<tr>
+<td align="center">Content-Range</td>
+<td align="center">在整个返回体中本部分的字节位置</td>
+<td align="center">Content-Range: bytes 21010-47021/47022</td>
+</tr>
+<tr>
+<td align="center">Content-Type</td>
+<td align="center">返回内容的MIME类型</td>
+<td align="center">Content-Type: text/html; charset=utf-8</td>
+</tr>
+<tr>
+<td align="center">Date</td>
+<td align="center">原始服务器消息发出的时间</td>
+<td align="center">Date: Tue, 15 Nov 2010 08:12:31 GMT</td>
+</tr>
+<tr>
+<td align="center">ETag</td>
+<td align="center">请求变量的实体标签的当前值</td>
+<td align="center">ETag: “737060cd8c284d8af7ad3082f209582d”</td>
+</tr>
+<tr>
+<td align="center">Expires</td>
+<td align="center">响应过期的日期和时间</td>
+<td align="center">Expires: Thu, 01 Dec 2010 16:00:00 GMT</td>
+</tr>
+<tr>
+<td align="center">Last-Modified</td>
+<td align="center">请求资源的最后修改时间</td>
+<td align="center">Last-Modified: Tue, 15 Nov 2010 12:45:26 GMT</td>
+</tr>
+<tr>
+<td align="center">Location</td>
+<td align="center">用来重定向接收方到非请求URL的位置来完成请求或标识新的资源</td>
+<td align="center">Location: <a target="_blank" rel="noopener" href="http://www.zcmhi.com/archives/94.html">http://www.zcmhi.com/archives/94.html</a></td>
+</tr>
+<tr>
+<td align="center">Pragma</td>
+<td align="center">包括实现特定的指令，它可应用到响应链上的任何接收方</td>
+<td align="center">Pragma: no-cache</td>
+</tr>
+<tr>
+<td align="center">Proxy-Authenticate</td>
+<td align="center">它指出认证方案和可应用到代理的该URL上的参数</td>
+<td align="center">Proxy-Authenticate: Basic</td>
+</tr>
+<tr>
+<td align="center">refresh</td>
+<td align="center">应用于重定向或一个新的资源被创造，在5秒之后重定向（由网景提出，被大部分浏览器支持）</td>
+<td align="center">Refresh: 5; url=<a target="_blank" rel="noopener" href="http://www.zcmhi.com/archives/94.html">http://www.zcmhi.com/archives/94.html</a></td>
+</tr>
+<tr>
+<td align="center">Retry-After</td>
+<td align="center">如果实体暂时不可取，通知客户端在指定时间之后再次尝试</td>
+<td align="center">Retry-After: 120</td>
+</tr>
+<tr>
+<td align="center">Server</td>
+<td align="center">web服务器软件名称</td>
+<td align="center">Server: Apache/1.3.27 (Unix) (Red-Hat/Linux)</td>
+</tr>
+<tr>
+<td align="center">Set-Cookie</td>
+<td align="center">设置Http Cookie</td>
+<td align="center">Set-Cookie: UserID=JohnDoe; Max-Age=3600; Version=1</td>
+</tr>
+<tr>
+<td align="center">Trailer</td>
+<td align="center">指出头域在分块传输编码的尾部存在</td>
+<td align="center">Trailer: Max-Forwards</td>
+</tr>
+<tr>
+<td align="center">Transfer-Encoding</td>
+<td align="center">文件传输编码</td>
+<td align="center">Transfer-Encoding:chunked</td>
+</tr>
+<tr>
+<td align="center">Vary</td>
+<td align="center">告诉下游代理是使用缓存响应还是从原始服务器请求</td>
+<td align="center">Vary: *</td>
+</tr>
+<tr>
+<td align="center">Via</td>
+<td align="center">告知代理客户端响应是通过哪里发送的</td>
+<td align="center">Via: 1.0 fred, 1.1 nowhere.com (Apache/1.1)</td>
+</tr>
+<tr>
+<td align="center">Warning</td>
+<td align="center">警告实体可能存在的问题</td>
+<td align="center">Warning: 199 Miscellaneous warning</td>
+</tr>
+<tr>
+<td align="center">WWW-Authenticate</td>
+<td align="center">表明客户端请求实体应该使用的授权方案</td>
+<td align="center">WWW-Authenticate: Basic</td>
+</tr>
+</tbody></table>
+<h3 id="请求method"><a href="#请求method" class="headerlink" title="请求method"></a><a name="5">请求method</a></h3><h4 id="GET和POST"><a href="#GET和POST" class="headerlink" title="GET和POST"></a><a name="6">GET和POST</a></h4><p>  相同：都是http请求，tcp连接</p>
+<p>  不同：</p>
+<table>
+<thead>
+<tr>
+<th align="center">GET</th>
+<th align="center">POST</th>
+<th align="center">操作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">参数再URL上</td>
+<td align="center">参数在request body里</td>
+<td align="center">无</td>
+</tr>
+<tr>
+<td align="center">参数有长度限制</td>
+<td align="center">长度没有限制</td>
+<td align="center">无</td>
+</tr>
+<tr>
+<td align="center">参数只允许ASCII字符</td>
+<td align="center">post没有限制</td>
+<td align="center">无</td>
+</tr>
+<tr>
+<td align="center">明文传输，参数暴露</td>
+<td align="center">更安全</td>
+<td align="center">无</td>
+</tr>
+<tr>
+<td align="center">点击回退或刷新时，get请求不会再次提交表单，get回退无害</td>
+<td align="center">点击回退或刷新时，post请求会再次提交表单，post是回退有害的</td>
+<td align="center">无</td>
+</tr>
+<tr>
+<td align="center">get能被缓存，可以收藏为书签，参数保留在浏览器历史中</td>
+<td align="center">post不能被缓存，不可收藏为书签，参数不会保留在浏览器历史中</td>
+<td align="center">无</td>
+</tr>
+<tr>
+<td align="center">get请求只发送一个tcp数据包，即http header和data共同发送给web服务器，服务器响应200 OK.</td>
+<td align="center">post请求发送两个tcp数据包，第一次发送http header，如果web服务器予以响应100 continue，则发送第二个数据包data，服务器响应200 OK.</td>
+<td align="center">无</td>
+</tr>
+</tbody></table>
+<h3 id="其他请求method"><a href="#其他请求method" class="headerlink" title="其他请求method"></a><a name="7">其他请求method</a></h3><div style="border: 1px solid #ccc;border-radius: 10px;padding-left:20px;">
+
+
+
+<h4 id="HEAD"><a href="#HEAD" class="headerlink" title="HEAD"></a>HEAD</h4><p>  类似于get请求，只不过返回的响应中没有具体的内容，用于获取报头</p>
+<h4 id="PUT"><a href="#PUT" class="headerlink" title="PUT"></a>PUT</h4><p>  put请求与post一样都会改变服务器的数据，但是put的侧重点在于对于数据的修改操作，但是post侧重于对于数据的增加。</p>
+<h4 id="DELETE"><a href="#DELETE" class="headerlink" title="DELETE"></a>DELETE</h4><p>  delete请求用来删除服务器的资源。</p>
+<h4 id="CONNECT"><a href="#CONNECT" class="headerlink" title="CONNECT"></a>CONNECT</h4><p>  HTTP/1.1协议中预留给能够将连接改为管道方式的代理服务器。</p>
+<h4 id="PATCH"><a href="#PATCH" class="headerlink" title="PATCH"></a>PATCH</h4><p>  向服务器端提交数据，请求数据在报文body里。发送一个修改数据的请求，需求数据更新（部分更新）</p>
+<h4 id="OPTIONS"><a href="#OPTIONS" class="headerlink" title="OPTIONS"></a>OPTIONS</h4><p>  options请求属于浏览器的预检请求，查看服务器是否接受请求，预检通过后，浏览器才会去发get，post，put，delete等请求。至于什么情况下浏览器会发预检请求，浏览器会会将请求分为两类，简单请求与非简单请求，非简单请求会产生预检options请求。</p>
+<h4 id="TRACE"><a href="#TRACE" class="headerlink" title="TRACE"></a>TRACE</h4><p>  回显服务器收到的请求，主要用于测试或诊断。</p>
+</div>
+
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a><a name="8">总结</a></h4><div style="border: 1px solid #ccc;border-radius: 10px;padding-left:20px;">
+
+
+<p>  这些不同方式的请求形式，只是一种规范定义而已，并不是说get请求无法修改服务器的数据，只是一种规范，比如你也可以所有的请求都通过post方式来访问，实现功能上面没有任何问题，只是说这种做不符合了规范而已，我们平常编码还是尽量符合规范比较好。</p>
+</div>
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/weixin.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2018/03/20/HTTP%E8%AF%B7%E6%B1%82%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B%E4%BB%A5%E5%8F%8A%E5%A4%B4%E4%BF%A1%E6%81%AF%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90/" target="_blank">HTTP请求完整过程以及头信息深入解析</a>
-  
-    </h1>
-  
+      </a>
+    </div>
+    
 
-
-        <div class="article-info info-on-right">
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Ambition
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://qms888888.gitee.io/2018/03/20/HTTP请求完整过程以及头信息深入解析/" title="HTTP请求完整过程以及头信息深入解析" target="_blank">https://qms888888.gitee.io/2018/03/20/HTTP请求完整过程以及头信息深入解析/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    <div class="article-pop-out tagcloud">
+      <i class="icon-tuding"></i>
+      <a class="article-tag-list-link color3">置顶</a>
+    </div>
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -329,148 +601,116 @@
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://qms888888.gitee.io/2018/03/20/HTTP%E8%AF%B7%E6%B1%82%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B%E4%BB%A5%E5%8F%8A%E5%A4%B4%E4%BF%A1%E6%81%AF%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2018/03/19/Javascript%E4%B8%ADBOM%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E7%94%A8%E6%B3%95/" class="archive-article-date">
-        <time datetime="2018-03-19T01:54:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-19</time>
-</a>
 
+
+<nav id="article-nav">
+  
+    <a href="/2018/03/21/%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          防抖和节流
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/03/19/Javascript%E4%B8%ADBOM%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E7%94%A8%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Javascript中BOM的介绍和用法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2018/03/19/Javascript%E4%B8%ADBOM%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E7%94%A8%E6%B3%95/" target="_blank">Javascript中BOM的介绍和用法</a>
-  
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2018/03/18/Node-js%E5%85%A5%E9%97%A8/" class="archive-article-date">
-        <time datetime="2018-03-18T02:21:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-18</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2018/03/18/Node-js%E5%85%A5%E9%97%A8/" target="_blank">初识Node— Node.js入门</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">node.js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2018/03/17/JS%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%E7%BB%8F%E5%85%B8%E6%A1%88%E4%BE%8B%E4%B8%8E%E5%88%86%E6%9E%90/" class="archive-article-date">
-        <time datetime="2018-03-17T03:29:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-17</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2018/03/17/JS%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%E7%BB%8F%E5%85%B8%E6%A1%88%E4%BE%8B%E4%B8%8E%E5%88%86%E6%9E%90/" target="_blank">JS递归算法经典案例与分析</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
+
+
 
 
           </div>
@@ -511,8 +751,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
