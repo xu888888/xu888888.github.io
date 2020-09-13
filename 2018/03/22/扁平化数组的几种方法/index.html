@@ -6,16 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://qms888888.gitee.io">
-  <title>Tag: node.js | Ambition~不忘初心</title>
+  <title>扁平化数组的几种方法 | Ambition~不忘初心</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Ambition~不忘初心">
-<meta property="og:url" content="https://qms888888.gitee.io/tags/node-js/index.html">
+  <meta name="description" content="扁平化数组的几种方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="扁平化数组的几种方法">
+<meta property="og:url" content="https://qms888888.gitee.io/2018/03/22/%E6%89%81%E5%B9%B3%E5%8C%96%E6%95%B0%E7%BB%84%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="Ambition~不忘初心">
+<meta property="og:description" content="扁平化数组的几种方法">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2018-03-22T02:52:33.000Z">
+<meta property="article:modified_time" content="2020-09-08T05:10:16.434Z">
 <meta property="article:author" content="Ambition">
+<meta property="article:tag" content="javascript">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Ambition~不忘初心" type="application/atom+xml">
@@ -192,65 +197,324 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-扁平化数组的几种方法" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2018/03/18/Node-js%E5%85%A5%E9%97%A8/" class="archive-article-date">
-        <time datetime="2018-03-18T02:21:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-18</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2018/03/18/Node-js%E5%85%A5%E9%97%A8/" target="_blank">初识Node— Node.js入门</a>
   
+    <h1 class="article-title" itemprop="name">
+      扁平化数组的几种方法
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2018/03/22/%E6%89%81%E5%B9%B3%E5%8C%96%E6%95%B0%E7%BB%84%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/" class="archive-article-date">
+        <time datetime="2018-03-22T02:52:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-22</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">904字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">4分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h4 id="本文介绍扁平化数组的几种方法。"><a href="#本文介绍扁平化数组的几种方法。" class="headerlink" title="本文介绍扁平化数组的几种方法。"></a>本文介绍扁平化数组的几种方法。</h4><div style="border: 1px solid #ccc;border-radius: 10px;padding-left:20px;">
+
+<p>  <strong>目录</strong></p>
+<ul>
+<li><a href="#1">扁平化的概念</a></li>
+<li><a href="#2">数组扁平化</a></li>
+<li><a href="#3">数组扁平化的几种方法</a><ul>
+<li><a href="#4">【1】Array​.prototype​.flat()</a></li>
+<li><a href="#5">【2】归并方法 reduce()</a></li>
+<li><a href="#6">【3】toString()</a></li>
+<li><a href="#7">【4】循环+递归</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<a id="more"></a>
+
+<h3 id="扁平化的概念"><a href="#扁平化的概念" class="headerlink" title="扁平化的概念"></a><a name="1">扁平化的概念</a></h3><div style="border: 1px solid #ccc;border-radius: 10px;padding-left:20px;">
+
+<p>   扁平化管理是企业为解决层级结构的组织形式在现代环境下面临的难题而实施的一种管理模式。当企业规模扩大时，原来的有效办法是增加管理层<br>   次，而现在的有效办法是增加管理幅度。当管理层次减少而管理幅度增加时，金字塔状的组织形式就被“压缩”成扁平状的组织形式。</p>
+</div>
+
+
+<h3 id="数组扁平化"><a href="#数组扁平化" class="headerlink" title="数组扁平化"></a><a name="2">数组扁平化</a></h3><div style="border: 1px solid #ccc;border-radius: 10px;padding-left:20px;">
+
+<p>用于将嵌套多层的数组“拉平”，变成一维的数组</p>
+<blockquote>
+<p>1、[1, [2]] =&gt; [1,2]<br>2、[[1, 2], [3, 4]] =&gt; [1, 2, 3, 4]<br>3、[1, 2, [3, 4, [5, 6]]] =&gt; [1, 2, 3, 4, 5, 6]</p>
+</blockquote>
+</div>
+
+<h3 id="数组扁平化的几种方法"><a href="#数组扁平化的几种方法" class="headerlink" title="数组扁平化的几种方法"></a><a name="3">数组扁平化的几种方法</a></h3><h4 id="【1】Array​-prototype​-flat"><a href="#【1】Array​-prototype​-flat" class="headerlink" title="【1】Array​.prototype​.flat()"></a><a name="4">【1】Array​.prototype​.flat()</a></h4><div style="border: 1px solid #ccc;border-radius: 10px;padding-left:20px;">
+
+<p>flat()方法会按照一个可指定的深度depth递归遍历数组，并将所有元素与遍历到的子数组中的元素合并为一个新数组返回。该方法不会改变原数组</p>
+<p><strong>语法：</strong> let newArray = arr.flat(depth)</p>
+<p><strong>描述：</strong> depth为指定要提取嵌套数组的结构深度，默认值为 1<br>flat() 方法会移除数组中的空项</p>
+<p><strong>例子：</strong></p>
+<blockquote>
+<p>let arr1 = [1, 2, [3, 4]];<br>arr1.flat(); // [1, 2, 3, 4]<br>// 指定要提取嵌套数组的结构深度为1层<br>let arr2 = [1, 2, [3, 4, [5, 6]]];<br>arr2.flat(1); // [1, 2, 3, 4, [5, 6]]<br>// 指定要提取嵌套数组的结构深度为2层<br>let arr3 = [1, 2, [3, 4, [5, 6]]];<br>arr3.flat(2); // [1, 2, 3, 4, 5, 6]<br>// 使用 Infinity 作为深度，展开任意深度的嵌套数组<br>let arr4 = [1, 2, [3, 4, [5, 6]]]<br>arr4.flat(Infinity); // [1, 2, 3, 4, 5, 6]<br>// 移除数组中的空项<br>let arr5 = [1, 2, , 4, 5];<br>arr5.flat(); // [1, 2, 4, 5]</p>
+</blockquote>
+</div>
+
+
+<h4 id="【2】归并方法-reduce"><a href="#【2】归并方法-reduce" class="headerlink" title="【2】归并方法 reduce()"></a><a name="5">【2】归并方法 reduce()</a></h4><div style="border: 1px solid #ccc;border-radius: 10px;padding-left:20px;">
+
+
+<p>我们用reduce函数进行遍历，把prev的初值赋值为[]，如果当前的值是数组的话，那么我们就递归遍历它的孩子，如果当前的值不是数组，那么我们就把它拼接进数组里。</p>
+<blockquote>
+<p>let arr = [[1, 2, [3, 4], 5], [6, 7, 8], [[9, 10], 11]];<br>function flat(arr) {<br>return arr.reduce(function (prev, cur) {<br>return prev.concat(Array.isArray(cur) ? flat(cur) : cur);<br>}, [])<br>}<br>console.log(flat(arr)); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]</p>
+</blockquote>
+</div>
+
+
+<h4 id="【3】toString"><a href="#【3】toString" class="headerlink" title="【3】toString()"></a><a name="5">【3】toString()</a></h4><div style="border: 1px solid #ccc;border-radius: 10px;padding-left:20px;">
+
+<p>toString()方法有很大局限性，只适用于数组元素全部为数字的情况下</p>
+<blockquote>
+<p>// toString &amp;&amp; Json.parase<br>let arr = [[1, 2, [3, 4], 5], [6, 7, 8], [[9, 10], 11]];<br>function flat(arr) {<br>var str = arr.toString();<br>return JSON.parse(‘[‘ + str + ‘]’);<br>}<br>console.log(flat(arr)); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]</p>
+</blockquote>
+<blockquote>
+<p>// toString &amp;&amp; split<br>let arr = [[1, 2, [3, 4], 5], [6, 7, 8], [[9, 10], 11]];<br>function flat(arr) {<br>return arr.toString().split(‘,’).map(item =&gt; {<br>return Number(item)<br>})<br>}<br>console.log(flat(arr)); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]</p>
+</blockquote>
+<blockquote>
+<p>// join &amp;&amp; split<br>let arr = [[1, 2, [3, 4], 5], [6, 7, 8], [[9, 10], 11]];<br>function flat(arr) {<br>return arr.join(‘,’).split(‘,’).map(item =&gt; {<br>return Number(item);<br>})<br>}<br>console.log(flat(arr)); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]</p>
+</blockquote>
+</div>
+
+
+<h4 id="【4】循环-递归"><a href="#【4】循环-递归" class="headerlink" title="【4】循环+递归"></a><a name="6">【4】循环+递归</a></h4><div style="border: 1px solid #ccc;border-radius: 10px;padding-left:20px;">
+
+
+<p>递归的遍历每一项，若为数组则继续遍历，否则concat</p>
+<blockquote>
+<p>let arr = [[1, 2, [3, 4], 5], [6, 7, 8], [[9, 10], 11]];<br>function flat(arr) {<br>let result = [];<br>arr.map(item =&gt; {<br>if (Array.isArray(item)) {<br>result = result.concat(flat(item));<br>} else {<br>result.push(item);<br>}<br>});<br>return result;<br>}<br>console.log(flat(arr)); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]</p>
+</blockquote>
+</div>
+
+
+<h4 id="扩展运算符"><a href="#扩展运算符" class="headerlink" title="扩展运算符. . ."></a><a name="7">扩展运算符. . .</a></h4><div style="border: 1px solid #ccc;border-radius: 10px;padding-left:20px;">
+
+<p>… 用于取出参数对象的所有可遍历属性，拷贝到当前对象中</p>
+<blockquote>
+<p>let arr = [[1, 2, [3, 4], 5], [6, 7, 8], [[9, 10], 11]]<br>function flat(arr) {<br>while (arr.some(item =&gt; Array.isArray(item))) {<br>arr = [].concat(…arr);<br>}<br>return arr;<br>}<br>console.log(flat(arr)); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11</p>
+</blockquote>
+</div>
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/weixin.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Ambition
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://qms888888.gitee.io/2018/03/22/扁平化数组的几种方法/" title="扁平化数组的几种方法" target="_blank">https://qms888888.gitee.io/2018/03/22/扁平化数组的几种方法/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    <div class="article-pop-out tagcloud">
+      <i class="icon-tuding"></i>
+      <a class="article-tag-list-link color3">置顶</a>
+    </div>
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">node.js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+    
 
     
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://qms888888.gitee.io/2018/03/22/%E6%89%81%E5%B9%B3%E5%8C%96%E6%95%B0%E7%BB%84%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/21/%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">防抖和节流</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -291,9 +555,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
