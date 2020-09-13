@@ -17,7 +17,21 @@ function writeText (item, childArr = [], childIndex, parent = document.querySele
   dom.setAttribute('class', data.class || '')
   parent.appendChild(dom)
   let timer = setInterval(() => {
-    if (num <= text.length) { dom.innerhtml="text.substr(0," num) resume.scrolltop="100000" num++ } else clearinterval(timer) if (data.children) list.push({ ance: data.children, current: 0, length: data.children.length }) parentlist.push(dom) writetext('', dom) (childarr.length> 0) {
+    if (num <= text.length) {
+      dom.innerHTML = text.substr(0, num)
+      resume.scrollTop = 100000
+      num++
+    } else {
+      clearInterval(timer)
+      if (data.children) {
+        List.push({
+          ance: data.children,
+          current: 0,
+          length: data.children.length
+        })
+        parentList.push(dom)
+        writeText('', data.children, 0, dom)
+      } else if (childArr.length > 0) {
         if (childArr.length - 1 > childIndex) {
           writeText('', childArr, ++childIndex, parentList[parentList.length - 1])
           List[List.length - 1].current = List[List.length - 1].current + 1
@@ -47,4 +61,4 @@ function filterLength () {
     writeText(textArr[++currentIndex_])
     parentList = []
   }
-}</=>
+}
